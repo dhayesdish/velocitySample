@@ -3,9 +3,10 @@
   "cpus": 1,
   "mem": 128,
   "instances": 3,
-  "upgradeStrategy": {
-    "minimumHealthCapacity": 1
-  },
+    "upgradeStrategy": {
+        "minimumHealthCapacity": 0.5,
+        "maximumOverCapacity": 0.2
+    },
   "container": {
     "docker": {
       "image": "velocitytoss1/velocitytoss1:latest",
