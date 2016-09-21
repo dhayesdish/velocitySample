@@ -2,7 +2,8 @@
   "id": "/velocitytoss-nginx",
   "cpus": 1,
   "mem": 128,
-  "instances": 1,
+  "instances": 3,
+  "minimumHealthCapacity": 1,
   "container": {
     "docker": {
       "image": "velocitytoss1/velocitytoss1:latest",
