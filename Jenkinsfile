@@ -27,8 +27,6 @@ node {
         sh "docker login -u ${env.DOCKERHUB_USERNAME} -p ${env.DOCKERHUB_PASSWORD} -e demo@mesosphere.com"
         sh "docker push velocitytoss1/velocitytoss1:${gitCommit()}"
     }
-}
-
     // Deploy
     stage 'Deploy'
 
@@ -40,3 +38,6 @@ node {
         appId: 'velocitytoss-nginx',
         docker: "velocitytoss1/velocitytoss1:${gitCommit()}".toString()
     )
+}
+
+
