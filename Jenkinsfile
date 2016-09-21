@@ -25,6 +25,6 @@ node {
         ]]
     ) {
         sh "docker login -u ${env.DOCKERHUB_USERNAME} -p ${env.DOCKERHUB_PASSWORD} -e demo@mesosphere.com"
-        sh "docker push dhayesdish/VelocitySample:${gitCommit()}"
+        sh "docker push dhayesdish/velocitysample:${gitCommit()}"
     }
 }
