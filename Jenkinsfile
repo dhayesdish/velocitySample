@@ -12,14 +12,14 @@ node {
 
     // Build Docker image
     stage 'Build'
-    sh "docker build -t dhayesdish/velocitySample:${gitCommit()} ."
+    sh "docker build -t dhayesdish/VelocitySample:${gitCommit()} ."
 
     // Log in and push image to GitLab
     stage 'Publish'
     withCredentials(
         [[
             $class: 'UsernamePasswordMultiBinding',
-            credentialsId: 'dockerhub-mesosphere',
+            credentialsId: 'dockerhub-meso-toss',
             passwordVariable: 'DOCKERHUB_PASSWORD',
             usernameVariable: 'DOCKERHUB_USERNAME'
         ]]
