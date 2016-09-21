@@ -36,7 +36,8 @@ node {
         credentialsId: 'dcos-token',
         filename: 'marathon.json',
         appId: 'velocitytoss-nginx',
-        docker: "velocitytoss1/velocitytoss1:${gitCommit()}".toString()
+        docker: "velocitytoss1/velocitytoss1:${gitCommit()}".toString(),
+        minimumHealthCapacity: 1
     )
 }
 
